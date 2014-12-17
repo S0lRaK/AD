@@ -28,25 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPortada));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStripPortada = new System.Windows.Forms.MenuStrip();
             this.arxiuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hotelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sortirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBoxFons = new System.Windows.Forms.PictureBox();
-            this.menuStrip1.SuspendLayout();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuStripPortada.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFons)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStripPortada
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripPortada.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arxiuToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(602, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStripPortada.Location = new System.Drawing.Point(0, 0);
+            this.menuStripPortada.Name = "menuStripPortada";
+            this.menuStripPortada.Size = new System.Drawing.Size(602, 24);
+            this.menuStripPortada.TabIndex = 0;
+            this.menuStripPortada.Text = "menuStrip1";
             // 
             // arxiuToolStripMenuItem
             // 
@@ -63,6 +65,7 @@
             this.hotelsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.hotelsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.hotelsToolStripMenuItem.Text = "Hotels";
+            this.hotelsToolStripMenuItem.Click += new System.EventHandler(this.hotelsToolStripMenuItem_Click);
             // 
             // sortirToolStripMenuItem
             // 
@@ -71,6 +74,7 @@
             this.sortirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.sortirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sortirToolStripMenuItem.Text = "Sortir";
+            this.sortirToolStripMenuItem.Click += new System.EventHandler(this.sortirToolStripMenuItem_Click);
             // 
             // pictureBoxFons
             // 
@@ -83,6 +87,11 @@
             this.pictureBoxFons.TabIndex = 1;
             this.pictureBoxFons.TabStop = false;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // FormPortada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,14 +99,14 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(602, 332);
             this.Controls.Add(this.pictureBoxFons);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuStripPortada);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menuStripPortada;
             this.Name = "FormPortada";
             this.Text = "Aplicació Hotels";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStripPortada.ResumeLayout(false);
+            this.menuStripPortada.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFons)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -106,11 +115,12 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStripPortada;
         private System.Windows.Forms.ToolStripMenuItem arxiuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hotelsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sortirToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBoxFons;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 

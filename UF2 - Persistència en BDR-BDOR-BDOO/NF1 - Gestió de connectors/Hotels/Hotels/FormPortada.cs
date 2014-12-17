@@ -12,9 +12,23 @@ namespace Hotels
 {
     public partial class FormPortada : Form
     {
+        // Atributs
+        
+        FormHotels formHotels = new FormHotels();
+        
         public FormPortada()
         {
             InitializeComponent();
+        }
+
+        private void hotelsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formHotels.Show();
+        }
+
+        private void sortirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();   // Fa referencia al propi formulari de la clase (FormPortada)
         }
     }
 }
