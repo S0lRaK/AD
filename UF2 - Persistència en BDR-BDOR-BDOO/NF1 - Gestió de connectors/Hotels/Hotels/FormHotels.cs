@@ -19,6 +19,11 @@ namespace Hotels
 
         private void FormHotels_Load(object sender, EventArgs e)
         {
+            // Selecciona la columna de la taula de la BD que es mostrarà
+            comboBoxCiutat.DisplayMember = "nombre";
+            //comboBoxCicles.ValueMember = "id";
+
+            // Relaciona el control amb les dades obtingudes
             comboBoxCiutat.DataSource = SentenciaSQL.obtenirTaula("ciudades");
         }
     }

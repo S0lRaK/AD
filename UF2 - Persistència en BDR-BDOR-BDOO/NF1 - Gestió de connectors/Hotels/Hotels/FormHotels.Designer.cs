@@ -82,7 +82,7 @@
             this.comboBoxCiutat.FormattingEnabled = true;
             this.comboBoxCiutat.Location = new System.Drawing.Point(65, 34);
             this.comboBoxCiutat.Name = "comboBoxCiutat";
-            this.comboBoxCiutat.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxCiutat.Size = new System.Drawing.Size(194, 21);
             this.comboBoxCiutat.TabIndex = 2;
             // 
             // dataGridViewHotels
