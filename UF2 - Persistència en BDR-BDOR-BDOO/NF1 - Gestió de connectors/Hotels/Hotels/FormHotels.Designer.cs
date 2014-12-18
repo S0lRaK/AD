@@ -109,6 +109,7 @@
             this.MinimizeBox = false;
             this.Name = "FormHotels";
             this.Text = "Hotels";
+            this.Load += new System.EventHandler(this.FormHotels_Load);
             this.toolStripEines.ResumeLayout(false);
             this.toolStripEines.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHotels)).EndInit();

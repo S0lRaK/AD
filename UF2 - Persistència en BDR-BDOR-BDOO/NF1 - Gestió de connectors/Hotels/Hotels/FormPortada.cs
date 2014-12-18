@@ -13,7 +13,6 @@ namespace Hotels
     public partial class FormPortada : Form
     {
         // Atributs
-        
         FormHotels formHotels = new FormHotels();
         
         public FormPortada()

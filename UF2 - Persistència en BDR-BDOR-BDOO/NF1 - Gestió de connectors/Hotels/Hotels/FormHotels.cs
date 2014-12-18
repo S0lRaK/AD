@@ -16,5 +16,10 @@ namespace Hotels
         {
             InitializeComponent();
         }
+
+        private void FormHotels_Load(object sender, EventArgs e)
+        {
+            comboBoxCiutat.DataSource = SentenciaSQL.obtenirTaula("ciudades");
+        }
     }
 }
