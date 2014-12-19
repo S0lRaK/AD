@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPortada));
             this.menuStripPortada = new System.Windows.Forms.MenuStrip();
             this.arxiuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hotelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sortirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBoxFons = new System.Windows.Forms.PictureBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStripPortada.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFons)).BeginInit();
             this.SuspendLayout();
@@ -87,11 +85,6 @@
             this.pictureBoxFons.TabIndex = 1;
             this.pictureBoxFons.TabStop = false;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // FormPortada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,7 +113,6 @@
         private System.Windows.Forms.ToolStripMenuItem hotelsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sortirToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBoxFons;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 

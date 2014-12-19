@@ -21,10 +21,14 @@ namespace Hotels
         {
             // Selecciona la columna de la taula de la BD que es mostrarà
             comboBoxCiutat.DisplayMember = "nombre";
-            //comboBoxCicles.ValueMember = "id";
+            // Selecciona la columna de la taula de la BD que es guardarà
+            comboBoxCiutat.ValueMember = "id_ciudad";
 
             // Relaciona el control amb les dades obtingudes
             comboBoxCiutat.DataSource = SentenciaSQL.obtenirTaula("ciudades");
+
+            // Omple el GridView amb els hotels corresponents a la ciutat seleccionada
+            dataGridViewHotels.DataSource = SentenciaSQL.obtenirHotelsDeCiutat((int)comboBoxCiutat.SelectedValue);
         }
     }
 }

@@ -41,5 +41,41 @@ namespace Hotels
 
             return taula;
         }
+
+        /**
+         *  Permet obtenir els hotels corresponents a una ciutat concreta,
+         *  que serà l'indicada a ComboBoxCiutat per SelectedValue
+         */
+        static public DataTable obtenirHotelsDeCiutat(int idCiutat)
+        {
+            SqlCommand sentencia = new SqlCommand();
+            SqlDataReader dades;
+
+            DataTable taula = new DataTable();
+            //string missatge = "";
+
+            sentencia.Connection = connexio;
+            sentencia.CommandText = "select * from hoteles where id_ciudad = @id";
+
+            // Es neteja qualsevol paràmetre previ i s'afegeix el que relaciona les dues taules
+            sentencia.Parameters.Clear();
+            sentencia.Parameters.AddWithValue("@id", idCiutat);
+            
+            try
+            {
+                connexio.Open();
+                dades = sentencia.ExecuteReader();
+
+                taula.Load(dades);
+
+                connexio.Close();
+            }
+            catch (SqlException excepcio)
+            {
+                String missatge = ErrorSQL.mostrarMissatge(excepcio);
+            }
+
+            return taula;
+        }
     }
 }

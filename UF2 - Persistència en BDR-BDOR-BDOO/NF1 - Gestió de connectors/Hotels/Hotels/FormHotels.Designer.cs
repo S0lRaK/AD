@@ -46,7 +46,7 @@
             this.toolStripButtonSortir});
             this.toolStripEines.Location = new System.Drawing.Point(0, 0);
             this.toolStripEines.Name = "toolStripEines";
-            this.toolStripEines.Size = new System.Drawing.Size(599, 25);
+            this.toolStripEines.Size = new System.Drawing.Size(818, 25);
             this.toolStripEines.TabIndex = 0;
             this.toolStripEines.Text = "toolStrip1";
             // 
@@ -74,16 +74,18 @@
             this.labelCiutat.Location = new System.Drawing.Point(12, 37);
             this.labelCiutat.Name = "labelCiutat";
             this.labelCiutat.Size = new System.Drawing.Size(34, 13);
-            this.labelCiutat.TabIndex = 1;
+            this.labelCiutat.TabIndex = 0;
             this.labelCiutat.Text = "Ciutat";
             // 
             // comboBoxCiutat
             // 
+            this.comboBoxCiutat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCiutat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxCiutat.FormattingEnabled = true;
             this.comboBoxCiutat.Location = new System.Drawing.Point(65, 34);
             this.comboBoxCiutat.Name = "comboBoxCiutat";
             this.comboBoxCiutat.Size = new System.Drawing.Size(194, 21);
-            this.comboBoxCiutat.TabIndex = 2;
+            this.comboBoxCiutat.TabIndex = 1;
             // 
             // dataGridViewHotels
             // 
@@ -92,14 +94,14 @@
             this.dataGridViewHotels.Name = "dataGridViewHotels";
             this.dataGridViewHotels.ReadOnly = true;
             this.dataGridViewHotels.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewHotels.Size = new System.Drawing.Size(572, 170);
-            this.dataGridViewHotels.TabIndex = 3;
+            this.dataGridViewHotels.Size = new System.Drawing.Size(791, 275);
+            this.dataGridViewHotels.TabIndex = 2;
             // 
             // FormHotels
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 261);
+            this.ClientSize = new System.Drawing.Size(818, 366);
             this.Controls.Add(this.dataGridViewHotels);
             this.Controls.Add(this.comboBoxCiutat);
             this.Controls.Add(this.labelCiutat);
