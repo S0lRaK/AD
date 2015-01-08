@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;    // Per a les connexions amb la Base de Dades
 using System.Data;              // Per a els tipus de dades DataTable
+using System.Windows.Forms;     // Per a els MessageBox (mostrar errors)
 
 namespace Hotels
 {
     static class SentenciaSQL
     {
-        static SqlConnection connexio = new SqlConnection("Data Source=(local)\\sqlexpress2014;Initial Catalog=hoteles_basico;Persist Security Info=True;User ID=sa;Password=sqlserver");
+        static SqlConnection connexio = new SqlConnection("Data Source=(local)\\sqlexpress2014;Initial Catalog=hotelesbasico;Persist Security Info=True;User ID=sa;Password=sqlserver");
 
         /**
          *  Permet obtenir els registres d'una taula passant com a paràmetre el nom d'aquesta
@@ -26,18 +27,26 @@ namespace Hotels
             sentencia.Connection = connexio;
             sentencia.CommandText = "select * from " + nomTaula;
 
-            // S'obre una connexió a la BDD
-            connexio.Open();
+            try
+            {
+                // S'obre una connexió a la BDD
+                connexio.Open();
 
-            // Executa la sentencia SQL passant-la a la BDD abans definida i retorna un DataReader
-            dades = sentencia.ExecuteReader();
+                // Executa la sentencia SQL passant-la a la BDD abans definida i retorna un DataReader
+                dades = sentencia.ExecuteReader();
 
-            // Omple el DataTable amb les dades obtingudes de la BDD
-            taula.Load(dades);
+                // Omple el DataTable amb les dades obtingudes de la BDD
+                taula.Load(dades);
             
-            // Es tanquen les connexions obertes a la BDD
-            dades.Close();
-            connexio.Close();
+                // Es tanquen les connexions obertes a la BDD
+                dades.Close();
+                connexio.Close();
+            }
+            catch(SqlException excepcio)
+            {
+                String missatge = ErrorSQL.mostrarMissatge(excepcio);
+                MessageBox.Show(missatge);
+            }
 
             return taula;
         }
@@ -73,6 +82,7 @@ namespace Hotels
             catch (SqlException excepcio)
             {
                 String missatge = ErrorSQL.mostrarMissatge(excepcio);
+                MessageBox.Show(missatge);
             }
 
             return taula;

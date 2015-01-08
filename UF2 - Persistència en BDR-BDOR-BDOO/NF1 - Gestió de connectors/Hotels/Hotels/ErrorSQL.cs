@@ -19,6 +19,9 @@ namespace Hotels
              */
             switch(excepcio.Number)
             {
+                case 4060:
+                    missatge = "Base de Dades no trobada.";
+                    break;
                 default:
                     missatge = excepcio.Number + ": " + excepcio.Message;
                     break;
