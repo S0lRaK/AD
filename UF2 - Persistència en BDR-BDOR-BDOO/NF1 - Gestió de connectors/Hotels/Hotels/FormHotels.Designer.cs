@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHotels));
             this.toolStripEines = new System.Windows.Forms.ToolStrip();
-            this.toolStripButtonSortir = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonNouHotel = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonSortir = new System.Windows.Forms.ToolStripButton();
             this.labelCiutat = new System.Windows.Forms.Label();
             this.comboBoxCiutat = new System.Windows.Forms.ComboBox();
             this.dataGridViewHotels = new System.Windows.Forms.DataGridView();
@@ -50,15 +50,6 @@
             this.toolStripEines.TabIndex = 0;
             this.toolStripEines.Text = "toolStrip1";
             // 
-            // toolStripButtonSortir
-            // 
-            this.toolStripButtonSortir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonSortir.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonSortir.Image")));
-            this.toolStripButtonSortir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonSortir.Name = "toolStripButtonSortir";
-            this.toolStripButtonSortir.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonSortir.Text = "Sortir";
-            // 
             // toolStripButtonNouHotel
             // 
             this.toolStripButtonNouHotel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -67,6 +58,15 @@
             this.toolStripButtonNouHotel.Name = "toolStripButtonNouHotel";
             this.toolStripButtonNouHotel.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonNouHotel.Text = "Nou hotel";
+            // 
+            // toolStripButtonSortir
+            // 
+            this.toolStripButtonSortir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonSortir.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonSortir.Image")));
+            this.toolStripButtonSortir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonSortir.Name = "toolStripButtonSortir";
+            this.toolStripButtonSortir.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonSortir.Text = "Sortir";
             // 
             // labelCiutat
             // 
@@ -111,6 +111,7 @@
             this.MinimizeBox = false;
             this.Name = "FormHotels";
             this.Text = "Hotels";
+            this.Activated += new System.EventHandler(this.FormHotels_Activated);
             this.Load += new System.EventHandler(this.FormHotels_Load);
             this.toolStripEines.ResumeLayout(false);
             this.toolStripEines.PerformLayout();

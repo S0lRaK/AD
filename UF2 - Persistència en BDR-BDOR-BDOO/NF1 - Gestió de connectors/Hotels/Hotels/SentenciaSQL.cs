@@ -11,7 +11,7 @@ namespace Hotels
 {
     static class SentenciaSQL
     {
-        static SqlConnection connexio = new SqlConnection("Data Source=(local)\\sqlexpress2014;Initial Catalog=hotelesbasico;Persist Security Info=True;User ID=sa;Password=sqlserver");
+        static SqlConnection connexio = new SqlConnection("Data Source=(local)\\sqlexpress2014;Initial Catalog=hoteles_basico;Persist Security Info=True;User ID=sa;Password=sqlserver");
 
         /**
          *  Permet obtenir els registres d'una taula passant com a paràmetre el nom d'aquesta
@@ -64,7 +64,15 @@ namespace Hotels
             //string missatge = "";
 
             sentencia.Connection = connexio;
-            sentencia.CommandText = "select * from hoteles where id_ciudad = @id";
+            sentencia.CommandText = "SELECT id_ciudad AS 'ID Ciutat'," +
+                                            "nombre AS Nom," +
+                                            "categoria AS Categoria," +
+                                            "direccion AS Direcció," +
+                                            "telefono AS Telèfon," +
+                                            "tipo AS Tipus," +
+                                            "cif AS CIF " +
+                                    "FROM hoteles " +
+                                    "WHERE id_ciudad = @id";
 
             // Es neteja qualsevol paràmetre previ i s'afegeix el que relaciona les dues taules
             sentencia.Parameters.Clear();

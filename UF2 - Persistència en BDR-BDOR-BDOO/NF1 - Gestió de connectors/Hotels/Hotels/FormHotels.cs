@@ -30,5 +30,10 @@ namespace Hotels
             // Omple el GridView amb els hotels corresponents a la ciutat seleccionada
             dataGridViewHotels.DataSource = SentenciaSQL.obtenirHotelsDeCiutat((int)comboBoxCiutat.SelectedValue);
         }
+
+        private void FormHotels_Activated(object sender, EventArgs e)
+        {
+
+        }
     }
 }
