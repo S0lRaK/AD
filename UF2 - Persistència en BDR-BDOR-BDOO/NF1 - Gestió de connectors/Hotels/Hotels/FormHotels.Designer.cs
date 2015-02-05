@@ -100,6 +100,7 @@
             this.dataGridViewHotels.Size = new System.Drawing.Size(791, 275);
             this.dataGridViewHotels.TabIndex = 2;
             this.dataGridViewHotels.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewHotels_UserDeletingRow);
+            this.dataGridViewHotels.DoubleClick += new System.EventHandler(this.dataGridViewHotels_DoubleClick);
             // 
             // FormHotels
             // 

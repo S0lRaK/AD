@@ -12,6 +12,8 @@ namespace Hotels
 {
     public partial class FormHotels : Form
     {
+        FormHotel formHotel = new FormHotel();
+        
         public FormHotels()
         {
             InitializeComponent();
@@ -39,7 +41,8 @@ namespace Hotels
 
         private void toolStripButtonNouHotel_Click(object sender, EventArgs e)
         {
-
+            formHotel.Text = "Alta Hotel";
+            formHotel.ShowDialog();
         }
 
         private void toolStripButtonSortir_Click(object sender, EventArgs e)
@@ -61,6 +64,12 @@ namespace Hotels
                 
             }
             
+        }
+
+        private void dataGridViewHotels_DoubleClick(object sender, EventArgs e)
+        {
+            formHotel.Text = "Modificació Hotel";
+            formHotel.ShowDialog();
         }
     }
 }
