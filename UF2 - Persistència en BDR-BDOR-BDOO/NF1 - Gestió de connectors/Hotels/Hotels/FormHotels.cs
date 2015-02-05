@@ -33,7 +33,34 @@ namespace Hotels
 
         private void FormHotels_Activated(object sender, EventArgs e)
         {
+            comboBoxCiutat.DataSource = SentenciaSQL.obtenirTaula("ciudades");
+            dataGridViewHotels.DataSource = SentenciaSQL.obtenirHotelsDeCiutat((int)comboBoxCiutat.SelectedValue);
+        }
 
+        private void toolStripButtonNouHotel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButtonSortir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void comboBoxCiutat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataGridViewHotels.DataSource = SentenciaSQL.obtenirHotelsDeCiutat((int)comboBoxCiutat.SelectedValue);
+        }
+
+        private void dataGridViewHotels_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            DialogResult resposta = MessageBox.Show("Estàs segur/a d'esborrar l'hotel seleccionat?", "Confirmació", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            
+            if(resposta == DialogResult.Yes)
+            {
+                
+            }
+            
         }
     }
 }

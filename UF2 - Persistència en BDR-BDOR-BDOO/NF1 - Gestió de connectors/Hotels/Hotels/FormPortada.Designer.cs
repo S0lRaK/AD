@@ -59,6 +59,7 @@
             // 
             // hotelsToolStripMenuItem
             // 
+            this.hotelsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("hotelsToolStripMenuItem.Image")));
             this.hotelsToolStripMenuItem.Name = "hotelsToolStripMenuItem";
             this.hotelsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.hotelsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);

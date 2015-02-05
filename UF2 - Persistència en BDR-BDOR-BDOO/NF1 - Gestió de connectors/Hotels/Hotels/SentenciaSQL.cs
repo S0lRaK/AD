@@ -95,5 +95,14 @@ namespace Hotels
 
             return taula;
         }
+
+        /**
+         * Busca referencies d'un registre a altres taules de la BDD
+         * retornant 'true' si n'ha trobat
+         */
+        static public Boolean buscarRegistreRelacionat()
+        {
+
+        }
     }
 }

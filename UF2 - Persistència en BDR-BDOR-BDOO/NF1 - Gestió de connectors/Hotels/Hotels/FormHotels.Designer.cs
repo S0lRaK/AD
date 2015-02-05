@@ -58,6 +58,7 @@
             this.toolStripButtonNouHotel.Name = "toolStripButtonNouHotel";
             this.toolStripButtonNouHotel.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonNouHotel.Text = "Nou hotel";
+            this.toolStripButtonNouHotel.Click += new System.EventHandler(this.toolStripButtonNouHotel_Click);
             // 
             // toolStripButtonSortir
             // 
@@ -67,6 +68,7 @@
             this.toolStripButtonSortir.Name = "toolStripButtonSortir";
             this.toolStripButtonSortir.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonSortir.Text = "Sortir";
+            this.toolStripButtonSortir.Click += new System.EventHandler(this.toolStripButtonSortir_Click);
             // 
             // labelCiutat
             // 
@@ -86,6 +88,7 @@
             this.comboBoxCiutat.Name = "comboBoxCiutat";
             this.comboBoxCiutat.Size = new System.Drawing.Size(194, 21);
             this.comboBoxCiutat.TabIndex = 1;
+            this.comboBoxCiutat.SelectedIndexChanged += new System.EventHandler(this.comboBoxCiutat_SelectedIndexChanged);
             // 
             // dataGridViewHotels
             // 
@@ -96,6 +99,7 @@
             this.dataGridViewHotels.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewHotels.Size = new System.Drawing.Size(791, 275);
             this.dataGridViewHotels.TabIndex = 2;
+            this.dataGridViewHotels.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewHotels_UserDeletingRow);
             // 
             // FormHotels
             // 
