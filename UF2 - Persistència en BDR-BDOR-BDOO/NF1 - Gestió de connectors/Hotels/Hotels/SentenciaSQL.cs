@@ -67,7 +67,7 @@ namespace Hotels
             sentencia.CommandText = "SELECT id_ciudad AS 'ID Ciutat'," +
                                             "nombre AS Nom," +
                                             "categoria AS Categoria," +
-                                            "direccion AS Direcció," +
+                                            "direccion AS Adreça," +
                                             "telefono AS Telèfon," +
                                             "tipo AS Tipus," +
                                             "cif AS CIF " +
