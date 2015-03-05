@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip_cinefil = new System.Windows.Forms.MenuStrip();
             this.dadesGeneralsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipusDePaperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.temesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.sortirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.menuStrip_cinefil.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStrip_cinefil
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip_cinefil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dadesGeneralsToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(538, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip_cinefil.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip_cinefil.Name = "menuStrip_cinefil";
+            this.menuStrip_cinefil.Size = new System.Drawing.Size(538, 24);
+            this.menuStrip_cinefil.TabIndex = 0;
+            this.menuStrip_cinefil.Text = "menuStrip1";
             // 
             // dadesGeneralsToolStripMenuItem
             // 
@@ -88,12 +88,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(538, 261);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.menuStrip_cinefil);
+            this.MainMenuStrip = this.menuStrip_cinefil;
             this.Name = "FormInici";
             this.Text = "Cinèfil";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStrip_cinefil.ResumeLayout(false);
+            this.menuStrip_cinefil.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,7 +101,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStrip_cinefil;
         private System.Windows.Forms.ToolStripMenuItem dadesGeneralsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipusDePaperToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem temesToolStripMenuItem;

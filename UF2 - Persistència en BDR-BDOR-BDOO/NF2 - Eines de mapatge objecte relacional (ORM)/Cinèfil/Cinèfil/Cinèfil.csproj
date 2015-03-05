@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Cinèfil</RootNamespace>
     <AssemblyName>Cinèfil</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -79,6 +80,9 @@
     <EmbeddedResource Include="FormInici.resx">
       <DependentUpon>FormInici.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTipusPaper.resx">
+      <DependentUpon>FormTipusPaper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -87,6 +91,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -100,6 +105,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imatges\accept_32.png" />
+    <Content Include="Imatges\accept_64.png" />
+    <Content Include="Imatges\application_exit_32.png" />
+    <Content Include="Imatges\change_32.png" />
+    <Content Include="Imatges\delete_32.png" />
+    <Content Include="Imatges\document_save_32.png" />
+    <Content Include="Imatges\fast_forward_36.png" />
+    <Content Include="Imatges\favicon.ico" />
+    <Content Include="Imatges\fons.jpg" />
+    <Content Include="Imatges\forward.png" />
+    <Content Include="Imatges\gtk_media_forward_ltr_32.png" />
+    <Content Include="Imatges\new_32.png" />
+    <Content Include="Imatges\rewind.png" />
+    <Content Include="Imatges\search_32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
