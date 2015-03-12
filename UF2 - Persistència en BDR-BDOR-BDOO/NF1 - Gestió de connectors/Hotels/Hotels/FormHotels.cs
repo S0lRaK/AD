@@ -13,7 +13,8 @@ namespace Hotels
     public partial class FormHotels : Form
     {
         FormHotel formHotel = new FormHotel();
-        
+        bool origenFormHotel = false;
+
         public FormHotels()
         {
             InitializeComponent();
@@ -35,12 +36,17 @@ namespace Hotels
 
         private void FormHotels_Activated(object sender, EventArgs e)
         {
-            comboBoxCiutat.DataSource = SentenciaSQL.obtenirTaula("ciudades");
-            dataGridViewHotels.DataSource = SentenciaSQL.obtenirHotelsDeCiutat((int)comboBoxCiutat.SelectedValue);
+            if (origenFormHotel)
+            {
+                comboBoxCiutat.DataSource = SentenciaSQL.obtenirTaula("ciudades");
+                dataGridViewHotels.DataSource = SentenciaSQL.obtenirHotelsDeCiutat((int)comboBoxCiutat.SelectedValue);
+                origenFormHotel = false;   
+            }
         }
 
         private void toolStripButtonNouHotel_Click(object sender, EventArgs e)
         {
+            origenFormHotel = true;
             formHotel.Text = "Alta Hotel";
             formHotel.ShowDialog();
         }
@@ -69,6 +75,7 @@ namespace Hotels
         private void dataGridViewHotels_DoubleClick(object sender, EventArgs e)
         {
             formHotel.Text = "Modificació Hotel";
+            UInt16 idCiutat;
             formHotel.ShowDialog();
         }
     }
